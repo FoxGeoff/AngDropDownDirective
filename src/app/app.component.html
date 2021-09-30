@@ -1,1 +1,48 @@
-<button type="button" class="btn btn-primary">Primary</button> - Good to Go
+<p>Example Bootstrap Dropdown component</p>
+<h6>
+  <a
+    href="https://stackblitz.com/edit/angular-h9rgmn?file=src%2Fapp%2Fapp.component.html"
+    >Working Code Example</a
+  >
+</h6>
+<h6>
+  <a
+    href="https://stackoverflow.com/questions/51249090/angular-dropdown-directive-doesnt-work/51257095"
+    >Issue Described on StackOverFlow</a
+  >
+</h6>
+<br />
+<div class="btn-group" appDropdown #r="appDropdown">
+  <button
+    type="button"
+    class="btn btn-primary dropdown-toggle"
+    data-toggle="dropdown"
+  >
+    Manage Recipe
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" [ngClass]="{ show: r.isOpen }">
+    <li>
+      <a class="dropdown-item" style="cursor: pointer">To Shopping List</a>
+    </li>
+    <li><a class="dropdown-item" href="#">Edit Recipe</a></li>
+    <li><a class="dropdown-item" href="#">Delete Recipe</a></li>
+  </ul>
+</div>
+<hr />
+<h6>
+  This is no longer working. "exportAs:'appDropdown'" is missing on the
+  directive
+</h6>
+<div class="col-xs-12">
+  <div class="btn-group" appDropdown>
+    <button type="button" class="btn btn-primary dropdown-toggle">
+      Manage Recipe <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#">To Shopping List</a></li>
+      <li><a href="#">Edit Recipe</a></li>
+      <li><a href="#">Delete Recipe</a></li>
+    </ul>
+  </div>
+</div>
