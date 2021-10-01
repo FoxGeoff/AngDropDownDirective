@@ -48,3 +48,5 @@ export class DropdownDirective {
 ```
 
 ### This is the fix for the 'Dropdown Directive on the Video 'Angular the Complete Course'
+
+### =========================================================
